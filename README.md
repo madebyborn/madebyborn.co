@@ -1,2 +1,2 @@
-# madebyborn.co
-source code of [madebyborn's website](http://madebyborn.co)
+# [madebyborn.co](http://madebyborn.co)
+source code of madebyborn's website
