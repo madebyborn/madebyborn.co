@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+
+  <title>BORN</title>
+
+  <!--
+  <script>
+    document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+  </script>
+-->
+  <link rel="stylesheet" href="./normalize.css">
+  <link rel="stylesheet" href="./unsemantic-grid-responsive-tablet.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="grid-container grid-parent">
+    <div class="grid-50 tablet-grid-33 mobile-grid-50 push-50" style="background: #F0563D">
+      <h1>pushed 50</h1>
+    </div>
+    <div class="grid-50 tablet-grid-66 mobile-grid-50 pull-50" style="background: #23A38F">
+      <h1>pulled 50!</h1>
+    </div>
+    <div class="grid-33 tablet-grid-50 mobile-grid-50  grid-parent" style="background: #4b3531">
+      <div class="grid-33 tablet-grid-50 mobile-grid-50" style="background: #EFF1C2">33</div>
+      <div class="grid-66 tablet-grid-50 mobile-grid-50" style="background: #654f8e">66</div>
+    </div>
+    <div class="grid-66 tablet-grid-50 mobile-grid-50 grid-parent" style="background: #eaeaea">
+      <div class="grid-50 tablet-grid-50 mobile-grid-50 prefix-25" style="background: #b499e8">prefix</div>
+    </div>
+  </div>
+
+</body>
+
+</html>
