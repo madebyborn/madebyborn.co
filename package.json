@@ -1,0 +1,28 @@
+{
+  "name": "madebyborn.co",
+  "version": "1.0.0",
+  "description": "BORN's Website.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/madebyborn/madebyborn.co.git"
+  },
+  "author": "Marco Alvarado <marcoantonioam9@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/madebyborn/madebyborn.co/issues"
+  },
+  "homepage": "https://github.com/madebyborn/madebyborn.co#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-jscs": "^3.0.2",
+    "gulp-jscs-stylish": "^1.4.0",
+    "gulp-jshint": "^2.0.1",
+    "gulp-util": "^3.0.7",
+    "jshint": "^2.9.2",
+    "jshint-stylish": "^2.2.0"
+  }
+}
