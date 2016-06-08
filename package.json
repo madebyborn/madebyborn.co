@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/madebyborn/madebyborn.co#readme",
   "devDependencies": {
+    "browser-sync": "^2.13.0",
     "gulp": "^3.9.1",
     "gulp-jscs": "^3.0.2",
     "gulp-jscs-stylish": "^1.4.0",

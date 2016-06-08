@@ -4,6 +4,7 @@ var jshint = require('gulp-jshint');
 var jscs = require('gulp-jscs');
 var stylish = require('gulp-jscs-stylish');
 var sass = require('gulp-sass');
+var browserSync = require('browser-sync').create();
 
 gulp.task('default', ['watch']);
 
@@ -19,13 +20,21 @@ gulp.task('jscs', function() {
     .pipe(stylish());
 });
 
-gulp.task('build-css', function() {
+gulp.task('js-watch', ['jshint', 'jscs'], browserSync.reload);
+
+gulp.task('sass', function() {
   return gulp.src('app/styles/main.scss')
     .pipe(sass())
-    .pipe(gulp.dest('app/assets/css'));
+    .pipe(gulp.dest('app/assets/css'))
+    .pipe(browserSync.stream());
 });
 
-gulp.task('watch', function() {
-  gulp.watch('app/scripts/**/*.js', ['jshint', 'jscs']);
-  gulp.watch('app/styles/main.scss', ['build-css']);
+gulp.task('serve', ['sass'], function() {
+  browserSync.init({
+    server: './app'
+  });
+
+  gulp.watch('app/styles/*.scss', ['sass']);
+  gulp.watch('app/**/*.html').on('change', browserSync.reload);
+  gulp.watch('app/scripts/**/*.js', ['js-watch']);
 });
