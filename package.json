@@ -18,7 +18,6 @@
   "homepage": "https://github.com/madebyborn/madebyborn.co#readme",
   "devDependencies": {
     "browser-sync": "^2.13.0",
-    "event-stream": "^3.3.2",
     "gulp": "^3.9.1",
     "gulp-angular-filesort": "^1.1.1",
     "gulp-inject": "^4.1.0",

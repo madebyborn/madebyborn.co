@@ -7,8 +7,7 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync').create(),
     angularFileSort = require('gulp-angular-filesort'),
     inject = require('gulp-inject'),
-    bowerFiles = require('main-bower-files'),
-    es = require('event-stream');
+    bowerFiles = require('main-bower-files');
 
 gulp.task('default', ['watch']);
 
