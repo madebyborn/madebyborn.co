@@ -1,0 +1,21 @@
+{
+  "name": "madebyborn.co",
+  "description": "BORN's Website.",
+  "main": "index.js",
+  "authors": [
+    "Marco Alvarado <marcoantonioam9@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/madebyborn/madebyborn.co",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.6"
+  }
+}
