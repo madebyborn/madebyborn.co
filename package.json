@@ -18,13 +18,17 @@
   "homepage": "https://github.com/madebyborn/madebyborn.co#readme",
   "devDependencies": {
     "browser-sync": "^2.13.0",
+    "event-stream": "^3.3.2",
     "gulp": "^3.9.1",
+    "gulp-angular-filesort": "^1.1.1",
+    "gulp-inject": "^4.1.0",
     "gulp-jscs": "^3.0.2",
     "gulp-jscs-stylish": "^1.4.0",
     "gulp-jshint": "^2.0.1",
     "gulp-sass": "^2.3.1",
     "gulp-util": "^3.0.7",
     "jshint": "^2.9.2",
-    "jshint-stylish": "^2.2.0"
+    "jshint-stylish": "^2.2.0",
+    "main-bower-files": "^2.13.1"
   }
 }
