@@ -1,0 +1,12 @@
+@mixin background-size($size) {
+  -webkit-background-size: $size;
+  -moz-background-size:    $size;
+  background-size:         $size;
+  -o-background-size:      $size;
+}
+
+@mixin background-filter($color, $url) {
+  background-size: cover;
+  background-position: center;
+  background-image: linear-gradient($color, $color), url($url);
+}
