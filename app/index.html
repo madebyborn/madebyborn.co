@@ -4,18 +4,28 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>Born Co.</title>
-
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
     <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/skeleton/css/skeleton.css">
     <!-- endinject -->
 
     <link rel="stylesheet" href="assets/css/main.css">
   </head>
-  <body>
-
+  <body ng-app="bornCo">
+    <bc-navbar></bc-navbar>
+    <ui-view></ui-view>
     <!-- bower:js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <!-- endinject -->
 
     <!-- inject:js -->
+    <script src="app.js"></script>
+    <script src="shared/signature/zigzagDirective.js"></script>
+    <script src="shared/navlink/navlinkDirective.js"></script>
+    <script src="shared/navbar/navbarDirective.js"></script>
+    <script src="shared/button/buttonDirective.js"></script>
+    <script src="components/home/homeController.js"></script>
     <!-- endinject -->
   </body>
 </html>
