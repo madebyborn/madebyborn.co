@@ -1,12 +1,17 @@
 (function() {
   'use strict';
   angular.module('bornCo', [
-    'ui.router'
+    'ui.router',
+    'ngAnimate'
   ])
   .config(function($stateProvider) {
     $stateProvider
-      .state('home', {
+      .state('index', {
         url: '',
+        templateUrl: 'components/home/homeView.html'
+      })
+      .state('home', {
+        url: '/',
         templateUrl: 'components/home/homeView.html'
       });
   });

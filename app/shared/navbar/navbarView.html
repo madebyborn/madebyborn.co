@@ -9,17 +9,31 @@
           </a>
         </div>
 
-        <nav>
+        <nav ng-class="{toggled: navbar.toggled}">
           <div class="nav-mobile">
-            <a id="nav-toggle"><span></span></a>
+            <a id="nav-toggle" ng-click="navbar.toggled = !navbar.toggled">
+              <i class="fa" ng-class="{'fa-bars': !navbar.toggled, 'fa-minus-circle': navbar.toggled}"></i>
+            </a>
           </div>
 
           <ul class="nav-list">
-            <bc-navlink ui-sref="home">Approach</bc-navlink>
-            <bc-navlink ui-sref="team">The team</bc-navlink>
-            <bc-navlink ui-sref="case-studies">Case studies</bc-navlink>
-            <bc-navlink ui-sref="talk">Let's talk</bc-navlink>
-            <bc-navlink ui-sref="stories">Our stories</bc-navlink>
+            <bc-navlink ui-sref="home" toggled="navbar.toggled">Approach</bc-navlink>
+            <bc-navlink ui-sref="team" toggled="navbar.toggled">The team</bc-navlink>
+            <bc-navlink ui-sref="case-studies" toggled="navbar.toggled">Case studies</bc-navlink>
+            <bc-navlink ui-sref="talk" toggled="navbar.toggled">Let's talk</bc-navlink>
+            <bc-navlink ui-sref="stories" toggled="navbar.toggled">Our stories</bc-navlink>
+          </ul>
+
+          <ul class="nav-social">
+            <a href="https://www.facebook.com/madebyborn/">
+              <i class="fa fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/madebyborn/">
+              <i class="fa fa-instagram"></i>
+            </a>
+            <a href="https://twitter.com/madebyborn">
+              <i class="fa fa-twitter"></i>
+            </a>
           </ul>
         </nav>
       </div>

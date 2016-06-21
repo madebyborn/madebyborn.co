@@ -7,7 +7,8 @@
     return {
       restrict: 'E',
       scope: {
-        uiSref: '@'
+        uiSref: '@',
+        toggled: '='
       },
       transclude: true,
       templateUrl: 'shared/navlink/navlinkView.html'
