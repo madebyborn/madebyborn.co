@@ -12,13 +12,13 @@ var gulp = require('gulp'),
 gulp.task('default', ['watch']);
 
 gulp.task('jshint', function() {
-  return gulp.src('app/scripts/**/*.js')
+  return gulp.src(['app/**/*.js', '!app/bower_components/**'])
     .pipe(jshint())
     .pipe(jshint.reporter('jshint-stylish'));
 });
 
 gulp.task('jscs', function() {
-  return gulp.src('app/scripts/**/*.js')
+  return gulp.src(['app/**/*.js', '!app/bower_components/**'])
     .pipe(jscs())
     .pipe(stylish());
 });
@@ -37,7 +37,7 @@ gulp.task('inject', function() {
     .pipe(inject(gulp.src(bowerFiles(), {read: false}),
           {name: 'bower', relative: true}))
     .pipe(inject(
-      gulp.src(['app/scripts/**/*.js']).pipe(angularFileSort()),
+      gulp.src(['app/**/*.js', '!app/bower_components/**']).pipe(angularFileSort()),
       {relative: true}
     ))
     .pipe(gulp.dest('app'));
@@ -50,7 +50,7 @@ gulp.task('serve', ['sass'], function() {
 
   gulp.watch('app/styles/*.scss', ['sass']);
   gulp.watch('app/**/*.html').on('change', browserSync.reload);
-  gulp.watch('app/scripts/**/*.js', ['js-watch', 'inject']);
+  gulp.watch(['app/**/*.js', '!app/bower_components/**'], ['js-watch', 'inject']);
   gulp.watch(['app/bower_components/**/*.js', 'app/bower_components/**/*.min.css'],
     ['inject']);
 });

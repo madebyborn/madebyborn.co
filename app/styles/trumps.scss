@@ -1,0 +1,5 @@
+
+#meet-born {
+  color: $white;
+  @include background-filter($trans-black, '/assets/img/backgrounds/5.jpg');
+}

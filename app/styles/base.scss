@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  font-family: 'montserrat', sans-serif;
+  background-color: $black;
+}
+
+.fa {
+  font-size: 36px;
+}
+
+header {
+  min-height: 100vh;
+  background-color: $black;
+
+  h1 {
+    font-weight: 200;
+  }
+
+  p {
+    text-align: center;
+    margin-bottom: 0;
+    font-family: 'Lora';
+    font-size: 1.5em;
+    font-style: italic;
+  }
+
+  .container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .row {
+      min-height: 70vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      text-align: center;
+    }
+  }
+}
+
+bc-button {
+  display: inherit;
+  a {
+    color: $white;
+    padding: 1em 2em;
+    border: 1px solid $white;
+    text-decoration: none;
+
+    &:hover {
+      color: $black;
+      background-color: $white;
+    }
+  }
+}
+
+bc-zigzag {
+  margin: 1em 0;
+}
