@@ -2,6 +2,70 @@ $nav-height: 70px;
 $icon-height-mobile: 50px;
 $top-padding: 1em;
 
+bc-navlink {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+
+  li {
+    padding: 0.5em 1em;
+    margin: 0 0.25em;
+    border: 1px solid transparent;
+    list-style: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      border: 1px solid $white;
+    }
+
+    &.active {
+      border: 1px solid $orange;
+      a {
+        color: $orange;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: $white;
+
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+}
+
+.nav-social {
+  a {
+    color: $white;
+    transition: color .2s;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+}
+
+bc-navbar {
+  &.headroom--pinned.headroom--not-top {
+    #navbar {
+      position: fixed;
+      top: 0;
+      background-color: $trans-black;
+    }
+  }
+
+  &.headroom--unpinned {
+    #navbar {
+      opacity: 0;
+      z-index: -1;
+    }
+  }
+}
+
 #navbar {
   position: absolute;
   top: 0;
@@ -9,13 +73,9 @@ $top-padding: 1em;
   width: 100%;
   height: $nav-height;
   padding-top: $top-padding;
+  padding-bottom: $top-padding;
   z-index: 1;
-
-  .nav-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
+  transition: background-color .5s, opacity 1s, z-index 1s;
 
   .brand {
     .big {
@@ -41,26 +101,7 @@ $top-padding: 1em;
     }
   }
 
-  .nav-mobile {
-    display: none;
-    position: fixed;
-    top: $top-padding;
-    right: 10vw;
-
-    @media screen and (max-width: $screen-md-min) {
-      width: 100%;
-      height: $icon-height-mobile;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-end;
-    }
-
-    a {
-      color: $orange;
-    }
-  }
-
+  // Wider than tablet
   .nav-list {
     display: flex;
     flex-direction: row;
@@ -71,60 +112,32 @@ $top-padding: 1em;
     @media screen and (max-width: $screen-md-min) {
       display: none;
     }
-
-    bc-navlink {
-      display: flex;
-      justify-content: center;
-      align-items: stretch;
-
-      li {
-        padding: 0.5em 1em;
-        margin: 0 0.25em;
-        border: 1px solid transparent;
-        list-style: none;
-        text-align: center;
-        display: flex;
-        align-items: center;
-
-        &:hover {
-          border: 1px solid $white;
-        }
-
-        &.active {
-          border: 1px solid $orange;
-          a {
-            color: $orange;
-          }
-        }
-
-        a {
-          text-decoration: none;
-          color: $white;
-        }
-      }
-    }
   }
 
   .nav-social {
     display: none;
-
-    a {
-      color: $white;
-      transition: color .2s;
-
-      &:hover {
-        color: $orange;
-      }
-    }
   }
 
   nav {
     flex-grow: 1;
     display: flex;
-    justify-content: center;
+  }
 
-    &.toggled {
-      @media screen and (max-width: $screen-md-min) {
+  #nav-toggle {
+    display: none;
+  }
+
+
+  // Mobile
+  nav {
+    @media screen and (max-width: $screen-md-min) {
+      .icons {
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+      }
+
+      &.toggled {
         position: fixed;
         left: 0;
         top: 0;
@@ -136,9 +149,9 @@ $top-padding: 1em;
 
         .nav-list {
           display: flex;
-          max-height: 60vh;
           flex-direction: column;
           justify-content: space-around;
+          flex: 4;
         }
 
         .nav-social {
@@ -147,17 +160,34 @@ $top-padding: 1em;
           align-items: center;
           justify-content: space-around;
           margin-top: 2em;
-          color: white;
+          color: $white;
+          flex: 1;
+        }
+
+        .icons {
+          padding-top: $top-padding;
+          padding-left: 20px;
+          padding-right: 20px;
         }
       }
-    }
-  }
 
-  #nav-toggle {
-    display: none;
+      .nav-mobile {
+        flex: 1;
+        width: 100%;
+        height: $icon-height-mobile;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
 
-    @media screen and (max-width: $screen-md-min) {
-      display: inherit;
+        a {
+          color: $orange;
+        }
+      }
+
+      #nav-toggle {
+        display: inherit;
+      }
     }
   }
 }

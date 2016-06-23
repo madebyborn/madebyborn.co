@@ -2,20 +2,20 @@
   <div class="container">
     <div class="navigation">
       <div class="nav-container">
-        <div class="brand">
-          <a href="#">
-            <img class="big" src="assets/img/icons/born-big.svg">
-            <img class="small" src="assets/img/icons/born-small.svg">
-          </a>
-        </div>
-
         <nav ng-class="{toggled: navbar.toggled}">
-          <div class="nav-mobile">
-            <a id="nav-toggle" ng-click="navbar.toggled = !navbar.toggled">
-              <i class="fa" ng-class="{'fa-bars': !navbar.toggled, 'fa-minus-circle': navbar.toggled}"></i>
-            </a>
+          <div class="icons">
+            <div class="brand">
+              <a href="#">
+                <img class="big" src="assets/img/icons/born-big.svg">
+                <img class="small" src="assets/img/icons/born-small.svg">
+              </a>
+            </div>
+            <div class="nav-mobile">
+              <a id="nav-toggle" ng-click="navbar.toggled = !navbar.toggled">
+                <i class="fa" ng-class="{'fa-bars': !navbar.toggled, 'fa-minus-circle': navbar.toggled}"></i>
+              </a>
+            </div>
           </div>
-
           <ul class="nav-list">
             <bc-navlink ui-sref="home" toggled="navbar.toggled">Approach</bc-navlink>
             <bc-navlink ui-sref="team" toggled="navbar.toggled">The team</bc-navlink>
