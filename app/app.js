@@ -14,7 +14,8 @@
       })
       .state('home', {
         url: '/',
-        templateUrl: 'components/home/homeView.html'
+        templateUrl: 'components/home/homeView.html',
+        controller: 'HomeCtrl'
       });
   });
 })();

@@ -8,33 +8,29 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/skeleton/css/skeleton.css">
-    <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css">
-    <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick-theme.css">
     <!-- endinject -->
 
     <link rel="stylesheet" href="assets/css/main.css">
   </head>
   <body ng-app="bornCo">
-    <bc-navbar headroom></bc-navbar>
+    <bc-navbar headroom tolerance=10></bc-navbar>
     <ui-view></ui-view>
     <!-- bower:js -->
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
-    <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/headroom.js/dist/headroom.js"></script>
     <script src="bower_components/headroom.js/dist/headroom.min.js"></script>
     <script src="bower_components/headroom.js/dist/jQuery.headroom.js"></script>
     <script src="bower_components/headroom.js/dist/jQuery.headroom.min.js"></script>
     <script src="bower_components/headroom.js/dist/angular.headroom.js"></script>
     <script src="bower_components/headroom.js/dist/angular.headroom.min.js"></script>
-    <script src="bower_components/slick-carousel/slick/slick.min.js"></script>
-    <script src="bower_components/angular-slick/dist/slick.js"></script>
     <!-- endinject -->
 
     <!-- inject:js -->
     <script src="app.js"></script>
     <script src="shared/zigzag/zigzagDirective.js"></script>
+    <script src="shared/step/stepDirective.js"></script>
     <script src="shared/navlink/navlinkDirective.js"></script>
     <script src="shared/navbar/navbarDirective.js"></script>
     <script src="shared/navbar/navbarController.js"></script>

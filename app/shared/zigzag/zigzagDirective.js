@@ -6,7 +6,10 @@
   function bcZigzag() {
     return {
       restrict: 'E',
-      template: '<img src="assets/img/icons/zigzag.svg"/>'
+      scope: {
+        class: '@'
+      },
+      templateUrl: 'assets/img/icons/zigzag.svg'
     };
   }
 })();
