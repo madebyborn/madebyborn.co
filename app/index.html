@@ -14,7 +14,9 @@
   </head>
   <body ng-app="bornCo">
     <bc-navbar headroom tolerance=10></bc-navbar>
-    <ui-view></ui-view>
+    <div ui-view="container"></div>
+    <div id="footer" ui-view="footer" bc-hide-on-state-change></div>
+
     <!-- bower:js -->
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
@@ -25,6 +27,7 @@
     <script src="bower_components/headroom.js/dist/jQuery.headroom.min.js"></script>
     <script src="bower_components/headroom.js/dist/angular.headroom.js"></script>
     <script src="bower_components/headroom.js/dist/angular.headroom.min.js"></script>
+    <script src="bower_components/ngSmoothScroll/lib/angular-smooth-scroll.js"></script>
     <!-- endinject -->
 
     <!-- inject:js -->
@@ -34,6 +37,9 @@
     <script src="shared/navlink/navlinkDirective.js"></script>
     <script src="shared/navbar/navbarDirective.js"></script>
     <script src="shared/navbar/navbarController.js"></script>
+    <script src="shared/hide-on-state-change/hideOnStateChangeDirective.js"></script>
+    <script src="shared/footer/footerDirective.js"></script>
+    <script src="shared/footer/footerController.js"></script>
     <script src="shared/centered-section/centeredSectionDirective.js"></script>
     <script src="shared/button/buttonDirective.js"></script>
     <script src="components/home/homeController.js"></script>

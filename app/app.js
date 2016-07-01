@@ -3,19 +3,38 @@
   angular.module('bornCo', [
     'ui.router',
     'ngAnimate',
-    'headroom'
+    'headroom',
+    'smoothScroll'
   ])
-  .config(function($stateProvider) {
+  .config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
-      .state('index', {
+      .state('root', {
         url: '',
-        templateUrl: 'components/home/homeView.html',
-        controller: 'HomeCtrl'
+        abstract: true,
+        views: {
+          'footer': {
+            templateUrl: 'shared/footer/footerView.html',
+            controller: 'FooterCtrl'
+          }
+        }
       })
-      .state('home', {
+      .state('root.home', {
         url: '/',
-        templateUrl: 'components/home/homeView.html',
-        controller: 'HomeCtrl'
+        views: {
+          'container@': {
+            templateUrl: 'components/home/homeView.html'
+          }
+        }
+      })
+      .state('root.team', {
+        url: '/team',
+        views: {
+          'container@': {
+            templateUrl: 'components/team/teamView.html'
+          }
+        }
       });
+
+    $urlRouterProvider.otherwise('/');
   });
 })();

@@ -1,4 +1,4 @@
-$nav-height: 70px;
+$nav-height: 60px;
 $icon-height-mobile: 50px;
 $top-padding: 1em;
 
@@ -7,33 +7,26 @@ bc-navlink {
   justify-content: center;
   align-items: stretch;
 
-  li {
+  a {
     padding: 0.5em 1em;
     margin: 0 0.25em;
     border: 1px solid transparent;
+    text-decoration: none;
+    color: $white;
     list-style: none;
     text-align: center;
     display: flex;
     align-items: center;
+    transition: color .3s, border .3s;
 
     &:hover {
-      border: 1px solid $white;
+      border: 1px solid $orange;
+      color: $orange;
     }
 
     &.active {
       border: 1px solid $orange;
-      a {
-        color: $orange;
-      }
-    }
-
-    a {
-      text-decoration: none;
-      color: $white;
-
-      &:hover {
-        color: $white;
-      }
+      color: $orange;
     }
   }
 }
@@ -132,11 +125,30 @@ bc-navbar {
 
   // Mobile
   nav {
+    @media screen and (max-width: $screen-xs-min) {
+      &.toggled .icons {
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 0 20px;
+        box-sizing: border-box;
+      }
+    }
+
+    @media screen and (min-width: $screen-xs-min) {
+       &.toggled .icons {
+         width: 85%;
+         padding: 0 20px;
+       }
+    }
+
     @media screen and (max-width: $screen-md-min) {
       .icons {
         display: flex;
         flex-direction: row;
         flex: 1;
+        width: 80%;
+        margin: 0 auto;
       }
 
       &.toggled {
@@ -189,6 +201,10 @@ bc-navbar {
 
       #nav-toggle {
         display: inherit;
+
+        img {
+          max-width: 50px;
+        }
       }
     }
   }

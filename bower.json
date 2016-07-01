@@ -21,6 +21,7 @@
     "skeleton": "^2.0.4",
     "angular-animate": "^1.5.7",
     "font-awesome": "^4.6.3",
-    "headroom.js": "https://npmcdn.com/headroom.js/bower.zip"
+    "headroom.js": "https://npmcdn.com/headroom.js/bower.zip",
+    "ngSmoothScroll": "^2.0.0"
   }
 }
