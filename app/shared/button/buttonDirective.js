@@ -6,11 +6,15 @@
   function bcButton() {
     return {
       restrict: 'E',
-      scope: {
-        href: '@'
-      },
       transclude: true,
-      templateUrl: 'shared/button/buttonView.html'
+      templateUrl: 'shared/button/buttonView.html',
+      link: link
     };
+
+    function link(scope, element, attr) {
+      if (attr.href) {
+        scope.href = attr.href;
+      }
+    }
   }
 })();

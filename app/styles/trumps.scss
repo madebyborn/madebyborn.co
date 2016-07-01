@@ -1,5 +1,237 @@
-
 #meet-born {
   color: $white;
   @include background-filter($trans-black, '/assets/img/backgrounds/5.jpg');
+}
+
+#about-steps {
+  background-color: $white;
+  color: $black;
+
+  .zigzag {
+    fill: $black;
+  }
+}
+
+#steps {
+  background-color: $white;
+  color: $black;
+  font-family: "Lora";
+
+
+  @media screen and (min-width: $screen-md-min) {
+    display:-webkit-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+
+    bc-step {
+      flex: 50%;
+      height: 20em;
+
+      #step-1, #step-3 {
+        border-right:  1px solid $white-dark;
+      }
+
+      #step-1, #step-2 {
+        border-bottom: 1px solid $white-dark;
+      }
+    }
+  }
+
+  .step {
+    box-sizing: border-box;
+    color: $orange;
+    height: 100%;
+
+    &:hover {
+      background-color: $white-hover;
+
+      hr {
+        width: 100%;
+      }
+    }
+
+    .title {
+      font-weight: 400;
+      font-size: 1.5em;
+    }
+
+    .number {
+      color: $orange;
+      font-weight: 700;
+      font-size: 3em;
+    }
+
+    p {
+      color: $black;
+    }
+
+    hr {
+      width: 0;
+      border-top: 1px solid $orange;
+      transition: width .5s;
+      margin-bottom: 0;
+      padding-bottom: 2em;
+    }
+  }
+}
+
+#mishu {
+  padding: 15vh 0;
+  text-align: center;
+  background-color: $orange;
+  background-image: url("/assets/img/backgrounds/Mishu.jpg");
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+  font-family: "Lora";
+
+  .row {
+    @media screen and (min-width: $screen-sm-min) {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .author {
+    font-style: italic;
+
+    .name {
+      font-size: 2.5em;
+    }
+  }
+
+  q {
+    font-size: 1.5em;
+  }
+}
+
+#we-do {
+  background-color: $white;
+  color: $black;
+
+  .title {
+    color: $orange;
+  }
+
+  .zigzag {
+    fill: $black;
+  }
+}
+
+#activities {
+  padding: 20vh 0;
+  text-align: center;
+  font-family: "Lora";
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-around;
+
+    @media screen and (max-width: $screen-sm-min) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .title {
+    color: $orange;
+    text-decoration: underline;
+  }
+
+  .works {
+    border: 1px solid $white;
+    margin: 3.5em 0;
+    position: relative;
+
+    &::before {
+      content: '';
+      width: 0;
+      height: 2em;
+      position: absolute;
+      border: 1px solid $white;
+      top: -2.2em;
+      z-index: 100;
+    }
+
+    ul {
+      margin: 1em;
+      list-style: inside;
+      font-style: italic;
+
+      display: flex;
+      flex-direction: row;
+      flex-basis: 50%;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      li {
+        margin: 0.5em 0;
+        width: 50%;
+        text-align: left;
+      }
+    }
+  }
+}
+
+#home-images {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-basis: 50vw;
+  height: 60vw;
+
+  @media screen and (max-width: $screen-md-min) {
+    flex-wrap: nowrap;
+    height: 100vh;
+    .img {
+      width: 100% !important;
+      height: 33.33vh !important;
+    }
+  }
+
+  .img {
+    background-size: cover;
+    background-position: center bottom;
+    height: 60vw;
+
+    &.half {
+      height: 30vw;
+      width: 30%;
+    }
+  }
+
+  #recio {
+    background-image: url("/assets/img/projects/FP3.jpg");
+  }
+
+  #day-to-day {
+    background-image: url("/assets/img/backgrounds/4.jpg")
+  }
+
+  #yazmin-felix {
+    height: 60vw;
+    width: 70%;
+    background-image: url("/assets/img/projects/FP1.jpg");
+  }
+}
+
+#peter-drucker {
+  q {
+    font-size: 2em;
+    font-family: "Lora";
+    font-style: italic;
+    margin-bottom: 1em;
+  }
+
+  .author {
+    font-size: 1.5em;
+    color: $orange;
+  }
 }

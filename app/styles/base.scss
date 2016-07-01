@@ -2,10 +2,41 @@ body {
   margin: 0;
   font-family: 'montserrat', sans-serif;
   background-color: $black;
+  color: $white;
+}
+
+a {
+  display: block;
 }
 
 .fa {
   font-size: 36px;
+}
+
+.title {
+  font-style: italic;
+  font-family: 'Lora';
+  font-weight: 400;
+  font-size: 2.5em;
+}
+
+p {
+  font-weight: 400;
+}
+
+bc-centered-section {
+  .container {
+    padding-top: 15vh;
+    padding-bottom: 15vh;
+    text-align: center;
+
+    .row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
 }
 
 header {
@@ -48,6 +79,7 @@ bc-button {
     padding: 1em 2em;
     border: 1px solid $white;
     text-decoration: none;
+    transition: background-color .3s, border .1s;
 
     &:hover {
       color: $black;
@@ -58,4 +90,80 @@ bc-button {
 
 bc-zigzag {
   margin: 1em 0;
+}
+
+#footer {
+  display: none;
+
+  section {
+    padding: 5em 0;
+    background-color: $white;
+    color: $black;
+  }
+
+  .title {
+    text-align: center;
+    color: $orange;
+    text-decoration: underline;
+    margin-bottom: 2em;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+
+    @media screen and (max-width: $screen-md-min) {
+      flex-direction: column-reverse;
+      align-items: center;
+
+      &>* {
+        margin-bottom: 1.5em;
+      }
+    }
+  }
+
+  bc-button {
+    a {
+      display: flex;
+      align-items: center;
+      padding-top: .5em;
+      padding-bottom: .5em;
+      background-color: $white-dark;
+      text-align: center;
+
+      &:hover {
+        background-color: transparent;
+        color: $white-dark;
+        border: 1px solid $white-dark;
+      }
+    }
+  }
+
+  #footer-social {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    a {
+      color: $black;
+      padding: 0 1em;
+      transition: color .2s;
+
+      &:hover {
+        color: $white-dark;
+      }
+    }
+  }
+
+  #rights {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.visible {
+  display: block !important;
 }
