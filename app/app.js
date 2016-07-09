@@ -33,8 +33,16 @@
             templateUrl: 'components/team/teamView.html'
           }
         }
+      })
+      .state('root.case-studies', {
+        url: '/case-studies'
       });
 
     $urlRouterProvider.otherwise('/');
+  })
+  .run(function($rootScope) {
+    $rootScope.$on('$stateChangeSuccess', function() {
+      document.body.scrollTop = document.documentElement.scrollTop = 0;
+    });
   });
 })();

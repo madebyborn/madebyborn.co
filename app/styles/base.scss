@@ -26,8 +26,8 @@ p {
 
 bc-centered-section {
   .container {
-    padding-top: 15vh;
-    padding-bottom: 15vh;
+    padding-top: 12vh;
+    padding-bottom: 12vh;
     text-align: center;
 
     .row {
@@ -92,11 +92,31 @@ bc-zigzag {
   margin: 1em 0;
 }
 
+.pre-footer {
+  section {
+    background-color: $white;
+  }
+
+  .container {
+    padding: 3em 0;
+  }
+
+  a {
+    color: $orange;
+  }
+}
+
 #footer {
   display: none;
+  text-align: center;
+  font-weight: 300;
+
+  hr {
+    margin-top: 0;
+  }
 
   section {
-    padding: 5em 0;
+    padding-bottom: 2em;
     background-color: $white;
     color: $black;
   }
@@ -125,6 +145,9 @@ bc-zigzag {
   }
 
   bc-button {
+    flex: 1;
+    justify-content: flex-end;
+
     a {
       display: flex;
       align-items: center;
@@ -145,7 +168,7 @@ bc-zigzag {
     flex: 1;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 
     a {
       color: $black;
@@ -160,7 +183,8 @@ bc-zigzag {
 
   #rights {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-center;
   }
 }
 
