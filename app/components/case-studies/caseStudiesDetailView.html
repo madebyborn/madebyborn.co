@@ -1,0 +1,48 @@
+<header id="case-study" ng-cloak
+  style="background-image:
+   linear-gradient(rgba(38, 39, 41, 0.95), rgba(38, 39, 41, 0.95)),
+   url('{{ project.header }}')">
+  <div class="container">
+    <div class="row">
+      <h1>{{ project.title }}</h1>
+      <div class="services">
+        <h2>Services</h2>
+        <p>{{ project.services }}</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="project-description">
+  <div class="container">
+    <div class="row">
+      <div class="four columns">
+        <h2 class="title">The Project</h2>
+      </div>
+      <div class="eight columns">
+        <div class="description" marked="project.description">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="photos-section">
+  <img ng-src="{{ photo.fields.file.url }}" alt=""
+  ng-repeat="photo in project.introPhotos">
+</section>
+
+<bc-centered-section id="summary">
+  <p class="description" marked="project.summary">
+
+  </p>
+</bc-centered-section>
+
+<section class="photos-section">
+  <img ng-src="{{ photo.fields.file.url }}" alt=""
+  ng-repeat="photo in project.photos">
+</section>
+
+<bc-centered-section class="pre-footer">
+  <a class="title" ui-sref="root.talk">Let's talk.</a>
+</bc-centered-section>
