@@ -195,29 +195,47 @@
     }
   }
 
+  &:first-child {
+    border-top: solid;
+  }
+
   .img {
     background-size: cover;
     background-position: center bottom;
     height: 60vw;
+    box-sizing: border-box;
+    border-color: $white;
 
-    &.half {
+    &:first-child, &:nth-child(2) {
       height: 30vw;
       width: 30%;
+      border-right: solid;
+    }
+
+    &:first-child {
+      border-top: solid;
+    }
+
+    &:nth-child(2), &:nth-child(3) {
+      border-top: solid;
+      border-bottom: solid;
+    }
+
+    &:nth-child(3) {
+      width: 70%;
     }
   }
 
-  #recio {
-    background-image: url("/assets/img/projects/FP3.jpg");
+  #mood-1 {
+    background-image: url("/assets/img/backgrounds/8.jpg");
   }
 
-  #day-to-day {
-    background-image: url("/assets/img/backgrounds/4.jpg")
+  #mood-2 {
+    background-image: url("/assets/img/backgrounds/6.jpg");
   }
 
-  #yazmin-felix {
-    height: 60vw;
-    width: 70%;
-    background-image: url("/assets/img/projects/FP1.jpg");
+  #mood-3 {
+    background-image: url("/assets/img/backgrounds/7.jpg");
   }
 }
 
@@ -329,7 +347,7 @@
 
   bc-crew-member {
     width: 33.33vw;
-    
+
     .wrapper {
       background-size: cover;
       background-position: center;
@@ -469,6 +487,164 @@
       h1 {
         display: none;
       }
+    }
+  }
+}
+
+#case-studies {
+  @include background-filter($trans-black, '/assets/img/backgrounds/3.jpg');
+}
+
+#projects {
+  @media screen and (min-width: $screen-md-min) {
+    display: flex;
+    flex-direction: row;
+    align-content: stretch;
+    flex-wrap: wrap;
+  }
+
+  bc-project-headline {
+    display: block;
+
+    .background {
+      min-height: 70vw;
+      height: 100%;
+      background-size: cover;
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+    }
+
+    .content {
+      background-color: $trans-orange;
+      width: 100%;
+      padding: 1.5em;
+      margin: 3em;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-direction: column;
+    }
+
+    .title {
+      font-size: 2em;
+      font-family: "Montserrat";
+      font-style: normal;
+    }
+
+    @media screen and (min-width: $screen-md-min) {
+      min-width: 50%;
+      &:last-child:nth-child(odd) {
+        width: 100%;
+      }
+
+      .title {
+        font-size: 3em;
+      }
+
+      .background {
+        min-height: 40vw;
+      }
+    }
+  }
+}
+
+
+#case-study {
+  background-size: cover;
+
+  .row {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  h1 {
+    font-size: 4em;
+  }
+
+  h2 {
+    font-size: 2em;
+    font-family: 'Lora';
+    font-style: italic;
+  }
+}
+
+#project-description {
+  padding: 5em 0;
+  background-color: $white;
+  color: $black;
+
+  p {
+    font-weight: 300;
+  }
+}
+
+.photos-section {
+  background-color: $white;
+
+  img {
+    width: 100%;
+    display: block;
+    border-bottom: 1em solid $white;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+}
+
+#summary {
+  background-color: $white;
+  color: $black;
+  padding: 5em 0;
+
+  p {
+    margin-bottom: 0;
+    font-size: 1.2em;
+    font-style: italic;
+    font-family: "Lora";
+  }
+
+  @media screen and (min-width: $screen-md-min) {
+    p {
+      font-size: 1.5em;
+    }
+  }
+}
+
+#dribbling {
+  .fa {
+    font-size: 3em;
+    color: $pink;
+  }
+}
+
+#dribbble-shots {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: $white;
+  padding: .5em;
+
+
+  img {
+    display: block;
+    width: 100%;
+  }
+
+  .shot {
+    width: 50%;
+    border: .5em $white solid;
+    box-sizing: border-box;
+
+    &:first-child {
+      width: 100%;
+    }
+  }
+
+  @media screen and (min-width: $screen-md-min) {
+    .shot {
+      width: 33.33% !important;
     }
   }
 }
