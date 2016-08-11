@@ -17,6 +17,7 @@
     <div ui-view="container"></div>
     <div id="footer" ui-view="footer" bc-hide-on-state-change></div>
 
+    <script src='//maps.googleapis.com/maps/api/js'></script>
     <!-- bower:js -->
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
@@ -33,8 +34,16 @@
     <script src="bower_components/marked/lib/marked.js"></script>
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/angular-simple-logger/dist/angular-simple-logger.js"></script>
+    <script src="bower_components/lodash/lodash.js"></script>
+    <script src="bower_components/markerclustererplus/src/markerclusterer.js"></script>
+    <script src="bower_components/google-maps-utility-library-v3-markerwithlabel/dist/markerwithlabel.js"></script>
+    <script src="bower_components/google-maps-utility-library-v3-infobox/dist/infobox.js"></script>
+    <script src="bower_components/google-maps-utility-library-v3-keydragzoom/dist/keydragzoom.js"></script>
+    <script src="bower_components/js-rich-marker/src/richmarker.js"></script>
     <script src="bower_components/angular-marked/dist/angular-marked.js"></script>
     <script src="bower_components/jribbble/dist/jribbble.js"></script>
+    <script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
     <!-- endinject -->
 
     <!-- inject:js -->
@@ -51,6 +60,8 @@
     <script src="shared/crew-member/crewMemberDirective.js"></script>
     <script src="shared/centered-section/centeredSectionDirective.js"></script>
     <script src="shared/button/buttonDirective.js"></script>
+    <script src="components/lets-talk/letsTalkService.js"></script>
+    <script src="components/lets-talk/letsTalkController.js"></script>
     <script src="components/case-studies/caseStudiesService.js"></script>
     <script src="components/case-studies/caseStudiesDetailController.js"></script>
     <script src="components/case-studies/caseStudiesController.js"></script>
