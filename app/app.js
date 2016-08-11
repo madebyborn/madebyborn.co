@@ -7,7 +7,8 @@
     'smoothScroll',
     'contentful',
     'ngSanitize',
-    'hc.marked'
+    'hc.marked',
+    'uiGmapgoogle-maps'
   ])
   .config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
@@ -54,6 +55,15 @@
             controller: 'CaseStudiesDetailCtrl'
           }
         }
+      })
+      .state('root.talk', {
+        url: '/lets-talk',
+        views: {
+          'container@': {
+            templateUrl: 'components/lets-talk/letsTalkView.html',
+            controller: 'LetsTalkCtrl'
+          }
+        }
       });
 
     $urlRouterProvider.otherwise('/');
@@ -69,6 +79,11 @@
   .run(function($rootScope) {
     $rootScope.$on('$stateChangeSuccess', function() {
       document.body.scrollTop = document.documentElement.scrollTop = 0;
+    });
+  })
+  .config(function(uiGmapGoogleMapApiProvider) {
+    uiGmapGoogleMapApiProvider.configure({
+      key: 'AIzaSyDPhIaeU3yoUHpQocPKXyRlJ5UhKWzx3xo'
     });
   })
   .constant('BornBucket', 405639);
