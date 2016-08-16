@@ -2,7 +2,7 @@ $nav-height: 60px;
 $icon-height-mobile: 50px;
 $top-padding: 1em;
 
-bc-navlink {
+.navlink {
   display: flex;
   justify-content: center;
   align-items: stretch;
@@ -161,6 +161,13 @@ bc-navbar {
         background-color: $trans-black;
         flex-direction: column;
 
+        .icons {
+          padding-top: $top-padding;
+          padding-left: 20px;
+          padding-right: 20px;
+          width: 80%;
+        }
+
         .nav-list {
           display: flex;
           flex-direction: column;
@@ -178,11 +185,6 @@ bc-navbar {
           flex: 1;
         }
 
-        .icons {
-          padding-top: $top-padding;
-          padding-left: 20px;
-          padding-right: 20px;
-        }
       }
 
       .nav-mobile {

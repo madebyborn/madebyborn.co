@@ -1,3 +1,7 @@
+.description {
+  font-weight: 300;
+}
+
 #meet-born {
   color: $white;
   @include background-filter($trans-black, '/assets/img/backgrounds/5.jpg');
@@ -6,6 +10,10 @@
 #about-steps {
   background-color: $white;
   color: $black;
+
+  .container {
+    padding-bottom: 2em;
+  }
 
   .zigzag {
     fill: $black;
@@ -17,7 +25,6 @@
   color: $black;
   font-family: "Lora";
 
-
   @media screen and (min-width: $screen-md-min) {
     display:-webkit-flex;
     display: flex;
@@ -27,7 +34,11 @@
 
     bc-step {
       flex: 50%;
-      height: 20em;
+      height: 22em;
+
+      p {
+        font-size: 1.0em;
+      }
 
       #step-1, #step-3 {
         border-right:  1px solid $white-dark;
@@ -54,13 +65,12 @@
 
     .title {
       font-weight: 400;
-      font-size: 1.5em;
     }
 
     .number {
       color: $orange;
       font-weight: 700;
-      font-size: 3em;
+      font-size: 2.7em;
     }
 
     p {
@@ -98,14 +108,7 @@
 
   .author {
     font-style: italic;
-
-    .name {
-      font-size: 2.5em;
-    }
-  }
-
-  q {
-    font-size: 1.5em;
+    font-size: 1.6em;
   }
 }
 
@@ -117,15 +120,35 @@
     color: $orange;
   }
 
+  bc-zigzag {
+    padding-top: 4em;
+    margin-bottom: 0;
+  }
+
   .zigzag {
+    margin-top: 2em;
     fill: $black;
   }
 }
 
 #activities {
-  padding: 20vh 0;
+  padding: 15vh 0;
   text-align: center;
   font-family: "Lora";
+
+  p {
+    font-size: 1.2em;
+  }
+
+  @media screen and (min-width: $screen-md-min) {
+    .activity:first-child {
+      padding-right: 4.5em;
+    }
+
+    .activity:last-child {
+      padding-left: 4.5em;
+    }
+  }
 
   .row {
     display: flex;
@@ -141,6 +164,7 @@
 
   .title {
     color: $orange;
+    font-size: 3em;
   }
 
   .works {
@@ -205,6 +229,7 @@
     height: 60vw;
     box-sizing: border-box;
     border-color: $white;
+    border-width: .6em !important;
 
     &:first-child, &:nth-child(2) {
       height: 30vw;
@@ -239,19 +264,32 @@
   }
 }
 
-#peter-drucker {
-  q {
-    font-size: 2em;
-    font-family: "Lora";
-    font-style: italic;
-    margin-bottom: 1em;
+#medium {
+  padding: 15vh 0;
+  text-align: left;
+  @include background-filter($trans-orange, '/assets/img/backgrounds/2.jpg');
+  background-size: cover;
+  font-family: "Lora";
+
+  .row {
+    @media screen and (min-width: $screen-sm-min) {
+      display: flex;
+      flex-direction: row;
+    }
+
+    * {
+      margin-bottom: 1.8em;
+    }
   }
 
-  .author {
-    font-size: 1.5em;
-    color: $orange;
+  a {
+    font-family: "Lora";
+    color: $white;
+    font-size: 1.8em;
+    font-style: italic;
   }
 }
+
 
 #closer-look {
   @include background-filter($trans-black, '/assets/img/backgrounds/1.jpg');
@@ -262,9 +300,7 @@
 
   padding: 5em 0;
 
-  p {
-    font-size: 2em;
-    margin-bottom: 0;
+  q {
     font-family: 'Lora';
   }
 }
@@ -300,11 +336,15 @@
     flex: 1;
     padding: 0 1em;
     border-right: 1px solid $white-dark;
+    font-size: .8em;
+
+    @media screen and (max-width: $screen-md-min) {
+      margin-bottom: 3em;
+    }
 
     .title {
       font-family: "Montserrat";
       font-style: normal;
-      font-size: 1.5em;
     }
 
     hr {
@@ -338,72 +378,74 @@
   }
 }
 
+#meet-crew {
+  background-color: $white;
+  color: $black;
+
+  .container {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
 #crew {
   display: flex;
+  background-color: $white;
+  color: $black;
+  padding: 10vh 0;
 
-  @media screen and (max-width: $screen-md-min) {
-    flex-direction: column;
+  .row {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: $screen-md-min) {
+      flex-direction: column;
+    }
   }
 
-  bc-crew-member {
-    width: 33.33vw;
+  .bc-crew-member {
+    margin-bottom: 2em;
+    margin-left: 6em;
 
-    .wrapper {
-      background-size: cover;
-      background-position: center;
-      flex: 1;
-      height: 33.33vw;
-      display: flex;
-      align-items: flex-end;
-      text-align: center;
-      justify-content: center;
-      position: relative;
-
-      &#andres {
-        background-image: url("/assets/img/crew/Andres.jpg");
-      }
-
-      &#brianda {
-        background-image: url("/assets/img/crew/Brianda.jpg");
-      }
-
-      &#sofia {
-        background-image: url("/assets/img/crew/Sofia.jpg");
-      }
+    &:first-child {
+      margin-left: 0;
     }
 
     @media screen and (max-width: $screen-md-min) {
       width: 100%;
-      height: 100vw;
+      margin-left: 0;
     }
 
-    .toggle {
-      position: absolute;
-      right: 1em;
-      top: 1em;
-      z-index: 100;
-      color: $white;
-      height: 36px;
-      width: 36px;
-      background-size: contain;
+    #andres {
+      background-image: url("/assets/img/crew/Andres.jpg");
+    }
 
-      &.open {
-        background-image: url('/assets/img/icons/close.svg')
-      }
+    #brianda {
+      background-image: url("/assets/img/crew/Brianda.jpg");
+    }
 
-      &.closed {
-        background-image: url('/assets/img/icons/open.svg');
-      }
-
-      img {
-        height: 100%;
-      }
+    .fa {
+      font-size: 24px;
     }
 
     .member {
-      width: 100%;
-      padding: 0 1em;
-      background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(50, 50, 50, 1));
+      &:first-child {
+        margin-left: 0;
+        padding-left: 0;
+      }
+
+      h3 {
+        margin-bottom: .5em;
+      }
+
+      .picture {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center top;
+        width: 100%;
+        height: 37vh;
+        margin-bottom: 2em;
+      }
 
       .name {
         font-weight: 400;
@@ -413,79 +455,27 @@
         font-style: italic;
         font-family: "Lora";
         font-weight: 600;
+        font-size: 1.3em;
+        letter-spacing: 1px;
       }
 
-      hr {
-        width: 3em;
-        border-width: 2px;
-        border-color: $orange;
-        margin-bottom: 1em;
-        margin-top: 0;
+      .description {
+        font-family: "Lora";
+        font-size: 1.1em;
       }
-    }
-
-    .cover {
-      display: flex;
-      top: 0;
-      left: 0;
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      z-index: -1;
-      background-color: $trans-orange;
-      align-items: center;
-      justify-content: space-around;
-      opacity: 0;
-      transition: opacity .5s;
-
-      @media screen and (max-width: $screen-md-min) {
-        background-color: $trans-black;
-      }
-
-      &.open {
-        opacity: 1;
-        z-index: 100;
-
-        .square {
-          top: 20%;
-          left: 20%;
-          width: 60%;
-          height: 60%;
-          transform: rotate(45deg);
-        }
-      }
-    }
-
-    .square {
-      top: 10%;
-      left: 10%;
-      height: 80%;
-      width: 80%;
-      position: absolute;
-      border: 1px solid $white;
-      box-sizing: border-box;
-      transition: all .5s;
     }
 
     .social {
-      width: 60%;
       display: flex;
-      justify-content: space-around;
-      z-index: 999;
 
       a {
-        color: $white;
+        margin-right: 2em;
+        color: $black;
         transition: all .2s;
 
         &:hover {
           color: $white-dark;
         }
-      }
-    }
-
-    &:hover {
-      h1 {
-        display: none;
       }
     }
   }
@@ -505,6 +495,23 @@
 
   bc-project-headline {
     display: block;
+    box-sizing: border-box;
+    border-color: $white;
+
+    &:first-child {
+      border-top: .6em solid;
+      border-left: .6em solid;
+      border-right: .6em solid;
+    }
+
+    &:nth-child(2) {
+      border-top: .6em solid;
+      border-right: .6em solid;
+    }
+
+    &:nth-child(3) {
+      border: .6em solid;
+    }
 
     .background {
       min-height: 70vw;
@@ -525,22 +532,36 @@
       align-items: center;
       justify-content: space-around;
       flex-direction: column;
+      transition: opacity .5s;
+
+      @media screen and (min-width: $screen-md-min) {
+        opacity: 0;
+        z-index: -1;
+      }
+    }
+
+    &:hover {
+      .content {
+        opacity: 100;
+        z-index: 0;
+      }
+    }
+
+    p {
+      margin-bottom: 0;
     }
 
     .title {
-      font-size: 2em;
       font-family: "Montserrat";
       font-style: normal;
+      font-size: 2.6em;
     }
 
     @media screen and (min-width: $screen-md-min) {
-      min-width: 50%;
+      width: 50%;
+
       &:last-child:nth-child(odd) {
         width: 100%;
-      }
-
-      .title {
-        font-size: 3em;
       }
 
       .background {
@@ -559,24 +580,20 @@
     text-align: left;
   }
 
-  h1 {
-    font-size: 4em;
-  }
-
   h2 {
-    font-size: 2em;
     font-family: 'Lora';
     font-style: italic;
   }
 }
 
-#project-description {
+.project-description {
   padding: 5em 0;
   background-color: $white;
   color: $black;
 
   p {
     font-weight: 300;
+    font-size: 1.2em;
   }
 }
 
@@ -601,21 +618,14 @@
 
   p {
     margin-bottom: 0;
-    font-size: 1.2em;
     font-style: italic;
     font-family: "Lora";
-  }
-
-  @media screen and (min-width: $screen-md-min) {
-    p {
-      font-size: 1.5em;
-    }
+    color: $orange;
   }
 }
 
 #dribbling {
   .fa {
-    font-size: 3em;
     color: $pink;
   }
 }
@@ -659,6 +669,7 @@
 
 #contact {
   background-color: $white;
+  padding-bottom: 1em;
 
   @media screen and (min-width: $screen-md-min) {
     display: flex;
@@ -691,6 +702,10 @@
       margin: 0;
       padding: 5em 0;
       width: 100%;
+
+      @media screen and (max-width: $screen-sm-min) {
+        padding: 5em 2em;
+      }
     }
 
     h2 {
@@ -712,7 +727,6 @@
       background-color: $orange;
       font-style: italic;
       font-family: 'Lora';
-      font-size: 1.4em;
       padding-top: .5em;
       padding-bottom: .5em;
     }
@@ -734,10 +748,10 @@
 
 .address-circle {
   position: absolute;
-  top: 10vw;
-  left: 30vw;
-  width: 40vw;
-  height: 40vw;
+  top: 15vw;
+  left: 35vw;
+  width: 30vw;
+  height: 30vw;
   margin: 0 auto;
   background-color: $lighter-trans-orange;
   border-radius: 50%;
@@ -747,7 +761,7 @@
   transition: box-shadow .3s, background-color .3s, border .3s;
 
   @media screen and (min-width: $screen-md-min) {
-    left: 5vw;
+    left: 10vw;
   }
 
   &:hover {
@@ -760,15 +774,19 @@
     margin: 3em;
 
     .address {
-      font-size: 2vw;
+      font-size: 1.7vw;
       font-weight: 300;
     }
 
     .city {
-      font-size: 2.8vw;
+      font-size: 2.5vw;
       font-style: italic;
       font-family: 'Lora';
       font-weight: 700;
+    }
+
+    .phone {
+      font-size: 1.6vw;
     }
   }
 }
