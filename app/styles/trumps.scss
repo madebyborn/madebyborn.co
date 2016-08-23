@@ -248,6 +248,10 @@
 
     &:nth-child(3) {
       width: 70%;
+
+      @media screen and (max-width: $screen-md-min) {
+        border-top: none;
+      }
     }
   }
 
@@ -279,6 +283,10 @@
 
     * {
       margin-bottom: 1.8em;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -404,6 +412,7 @@
   }
 
   .bc-crew-member {
+    flex: 1;
     margin-bottom: 2em;
     margin-left: 6em;
 
@@ -442,9 +451,11 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center top;
-        width: 100%;
-        height: 37vh;
         margin-bottom: 2em;
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 100%;
       }
 
       .name {
@@ -491,27 +502,17 @@
     flex-direction: row;
     align-content: stretch;
     flex-wrap: wrap;
+    border-top: .3em solid;
+    border-bottom: .3em solid;
   }
 
   bc-project-headline {
     display: block;
     box-sizing: border-box;
     border-color: $white;
-
-    &:first-child {
-      border-top: .6em solid;
-      border-left: .6em solid;
-      border-right: .6em solid;
-    }
-
-    &:nth-child(2) {
-      border-top: .6em solid;
-      border-right: .6em solid;
-    }
-
-    &:nth-child(3) {
-      border: .6em solid;
-    }
+    border-top: .6em solid;
+    border-left: .6em solid;
+    border-right: .6em solid;
 
     .background {
       min-height: 70vw;
@@ -534,6 +535,15 @@
       flex-direction: column;
       transition: opacity .5s;
 
+      * {
+        margin-bottom: 1em;
+      }
+
+      &.mobile {
+        opacity: 1;
+        z-index: 1;
+      }
+
       @media screen and (min-width: $screen-md-min) {
         opacity: 0;
         z-index: -1;
@@ -551,14 +561,37 @@
       margin-bottom: 0;
     }
 
+
     .title {
       font-family: "Montserrat";
       font-style: normal;
       font-size: 2.6em;
     }
 
+    @media screen and (max-width: $screen-md-min) {
+      bc-button {
+        a {
+          padding: .5em;
+        }
+      }
+    }
+
     @media screen and (min-width: $screen-md-min) {
       width: 50%;
+
+      &:nth-child(odd) {
+        border-top: .3em solid;
+        border-left: .6em solid;
+        border-right: .6em solid;
+        border-bottom:  .3em solid;
+      }
+
+      &:nth-child(even) {
+        border-left: none;
+        border-top: .3em solid;
+        border-right: .6em solid;
+        border-bottom: .3em solid;
+      }
 
       &:last-child:nth-child(odd) {
         width: 100%;

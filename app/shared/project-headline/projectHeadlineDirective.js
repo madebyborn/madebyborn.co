@@ -11,7 +11,12 @@
         services: '@',
         studyId: '@'
       },
-      templateUrl: 'shared/project-headline/projectHeadlineView.html'
+      templateUrl: 'shared/project-headline/projectHeadlineView.html',
+      link: function(scope) {
+        if (/Mobi/.test(navigator.userAgent)) {
+          scope.isMobile = true;
+        }
+      }
     };
   }
 })();

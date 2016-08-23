@@ -142,7 +142,7 @@ header {
   h2 {
     font-size: 1.2em;
     line-height: 150%;
-    font-weight: 300;
+    font-weight: 400;
     margin-bottom: 0;
     font-family: 'Lora';
     font-size: 1.3em;
@@ -296,4 +296,9 @@ bc-zigzag {
 
 .visible {
   display: block !important;
+}
+
+
+.orange {
+  color: $orange;
 }

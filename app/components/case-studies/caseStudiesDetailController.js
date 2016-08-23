@@ -7,7 +7,6 @@
     caseStudiesFactory.getEntry($stateParams.id)
       .then(function(response) {
         var data = response.data.items[0].fields;
-        console.log(data);
 
         $scope.project = {
           id: $stateParams.id,

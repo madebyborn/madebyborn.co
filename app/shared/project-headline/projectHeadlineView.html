@@ -1,6 +1,6 @@
 <div class="background" ng-cloak
   style="background-image: url('{{ backgroundUrl }}')">
-  <div class="content">
+  <div class="content" ng-class="{mobile: isMobile}">
     <h2 class="title">{{title}}</h2>
     <bc-button href="#/case-studies/{{studyId}}">See Project +</bc-button>
     <p>{{ services }}</p>
