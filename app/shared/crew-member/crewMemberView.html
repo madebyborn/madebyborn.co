@@ -1,21 +1,15 @@
-<div id="{{id}}" class="wrapper" ng-init="open = false;"
-  ng-mouseover="open = true;" ng-mouseleave="open = false;">
+<div class="bc-crew-member">
   <div class="member">
+    <div id="{{imgId}}" class="picture"></div>
     <h3 class="name">{{name}}</h3>
-    <hr>
-    <p class="position">{{position}}</p>
-  </div>
-  <div class="cover" ng-class="{open: open}">
-    <div class="square">
-    </div>
+    <h4 class="position">{{position}}</h4>
+    <p class="description" ng-transclude>
+    </p>
     <div class="social">
       <a ng-if="dribbble" href="https://www.dribbble.com/{{dribbble}}"><i class="fa fa-dribbble"></i></a>
       <a ng-if="instagram" href="https://www.instagram.com/{{instagram}}"><i class="fa fa-instagram"></i></a>
       <a ng-if="behance" href="https://www.behance.net/{{behance}}"><i class="fa fa-behance"></i></a>
       <a ng-if="twitter" href="https://www.twitter.com/{{twitter}}"><i class="fa fa-twitter"></i></a>
     </div>
-  </div>
-  <div class="toggle" ng-click="open ? open = false : open = true"
-    ng-class="{open: open, closed: !open}">
   </div>
 </div>

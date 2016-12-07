@@ -5,12 +5,14 @@
   function bcCrewMember() {
     return {
       restrict: 'E',
+      replace: true,
       transclude: true,
       templateUrl: 'shared/crew-member/crewMemberView.html',
       scope: {
-        id: '@',
+        imgId: '@',
         name: '@',
         position: '@',
+        description: '@',
         dribbble: '@',
         instagram: '@',
         twitter: '@',

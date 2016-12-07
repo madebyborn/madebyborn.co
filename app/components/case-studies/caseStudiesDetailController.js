@@ -15,8 +15,11 @@
           header: data.header.fields.file.url,
           description: data.description,
           introPhotos: data.introPhotos,
+          description2: data.description2,
           summary: data.summary,
-          photos: data.photos
+          photos: data.photos,
+          description3: data.description3,
+          endPhotos: data.endPhotos
         };
       });
   }
