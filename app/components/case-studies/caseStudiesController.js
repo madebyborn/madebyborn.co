@@ -8,7 +8,7 @@
 
     caseStudiesFactory.get().then(
       function(response) {
-        $scope.caseStudies = response.data.items;
+        $scope.caseStudies = response.data.items.reverse();
       }
     );
 
