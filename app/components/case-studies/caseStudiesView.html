@@ -1,0 +1,38 @@
+<header id="case-studies">
+  <div class="container">
+    <div class="row">
+      <h1>Case studies</h1>
+      <bc-zigzag></bc-zigzag>
+      <h2>These are some of the projects we've been
+      part of.</h2>
+      <img scroll-to="projects" src="/assets/img/icons/chevron-down.svg"/>
+    </div>
+  </div>
+</header>
+
+<section id="projects">
+  <bc-project-headline ng-repeat="caseStudy in caseStudies"
+    title="{{ caseStudy.fields.title }}"
+    background-url="{{ caseStudy.fields.header.fields.file.url }}"
+    services="{{ caseStudy.fields.services }}",
+    study-id="{{ caseStudy.sys.id }}">
+  </bc-project-headline>
+</section>
+
+<bc-centered-section id="dribbling">
+  <h2 class="title">Now Dribbbling</h2>
+  <p>What are we up to?</p>
+  <i class="fa fa-dribbble"></i>
+</bc-centered-section>
+
+<section id="dribbble-shots">
+  <div ng-repeat="shot in shots" class="shot">
+    <a ng-href="{{ shot.url }}">
+      <img ng-src="{{ shot.imgUrl }}" alt="">
+    </a>
+  </div>
+</section>
+
+<bc-centered-section class="pre-footer">
+  <a class="title" ui-sref="root.talk">Let's talk.</a>
+</bc-centered-section>

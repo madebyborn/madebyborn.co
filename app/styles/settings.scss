@@ -1,0 +1,45 @@
+$black:             #262729;
+$trans-black:       rgba(38, 39, 41, 0.9);
+$navbar-black:       rgba(38, 39, 41, 0.95);
+$orange:            #FF4338;
+$trans-orange:      rgba(265, 67, 56, 0.9);
+$lighter-trans-orange: rgba(265, 67, 56, 0.75);
+$pink:              #EA4C89;
+$white:             #F7F7F7;
+$white-dark:        #CACACA;
+$white-hover:       #F2F2F2;
+
+$screen-xs-min:  400px;
+$screen-sm-min:  550px;
+$screen-md-min:  750px;
+$screen-lg-min:  1000px;
+
+@font-face {
+  font-family: montserrat;
+  font-weight: 200;
+  src: url('/./assets/font/montserrat-ultralight-webfont.ttf');
+}
+
+@font-face {
+  font-family: montserrat;
+  font-weight: 300;
+  src: url('/./assets/font/montserrat-light-webfont.ttf');
+}
+
+@font-face {
+  font-family: montserrat;
+  font-weight: 400;
+  src: url('/./assets/font/montserrat-regular-webfont.ttf');
+}
+
+@font-face {
+  font-family: montserrat;
+  font-weight: 500;
+  src: url('/./assets/font/montserrat-semibold-webfont.ttf');
+}
+
+@font-face {
+  font-family: montserrat;
+  font-weight: 700;
+  src: url('/./assets/font/montserrat-bold-webfont.ttf');
+}

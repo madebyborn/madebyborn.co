@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Born Co. | A creative studio based in Hermosillo, MX.</title>
+    <meta itemprop="name" content="Born Co. | A creative studio based in Hermosillo, MX.">
+    <meta name="description" content="We’re a small creative team based in the warm city of Hermosillo. We focus on building, developing and enhancing brands with powerful ideas.">
+    <meta name="theme-color" content="#262729">
+    <meta name="msapplication-navbutton-color" content="#262729">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta property="og:title" content="Born Co. | A creative studio based in Hermosillo, MX.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="http://madebyborn.co/public_files/Madebyborn.png">
+    <meta property="og:description" content="We’re a small creative team based in the warm city of Hermosillo. We focus on building, developing and enhancing brands with powerful ideas.">
+    <meta property="og:url" content="http://madebyborn.co">
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:creator" content="@madebyborn">
+    <meta name="twitter:title" content="Born Co. | A creative studio based in Hermosillo, MX." />
+    <meta name="twitter:description" content="We’re a small creative team based in the warm city of Hermosillo. We focus on building, developing and enhancing brands with powerful ideas." />
+    <meta name="twitter:image" content="http://madebyborn.co/public_files/Madebyborn.png">
+    <meta itemprop="image" content="http://madebyborn.co/public_files/Madebyborn.png">
+
+    <link href="https://fonts.googleapis.com/css?family=Lora:200,300,400,400i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/skeleton/css/skeleton.css">
+    <!-- endinject -->
+
+    <link rel="stylesheet" href="assets/css/main.css">
+  </head>
+  <body ng-app="bornCo">
+    <bc-navbar headroom tolerance=10></bc-navbar>
+    <div ui-view="container"></div>
+    <div id="footer" ui-view="footer" bc-hide-on-state-change></div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPhIaeU3yoUHpQocPKXyRlJ5UhKWzx3xo" type="text/javascript"></script>
+    <!-- bower:js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/headroom.js/dist/headroom.js"></script>
+    <script src="bower_components/headroom.js/dist/headroom.min.js"></script>
+    <script src="bower_components/headroom.js/dist/jQuery.headroom.js"></script>
+    <script src="bower_components/headroom.js/dist/jQuery.headroom.min.js"></script>
+    <script src="bower_components/headroom.js/dist/angular.headroom.js"></script>
+    <script src="bower_components/headroom.js/dist/angular.headroom.min.js"></script>
+    <script src="bower_components/ngSmoothScroll/lib/angular-smooth-scroll.js"></script>
+    <script src="bower_components/angular-contentful/dist/angular-contentful.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/marked/lib/marked.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/angular-simple-logger/dist/angular-simple-logger.js"></script>
+    <script src="bower_components/lodash/lodash.js"></script>
+    <script src="bower_components/markerclustererplus/src/markerclusterer.js"></script>
+    <script src="bower_components/google-maps-utility-library-v3-markerwithlabel/dist/markerwithlabel.js"></script>
+    <script src="bower_components/google-maps-utility-library-v3-infobox/dist/infobox.js"></script>
+    <script src="bower_components/google-maps-utility-library-v3-keydragzoom/dist/keydragzoom.js"></script>
+    <script src="bower_components/js-rich-marker/src/richmarker.js"></script>
+    <script src="bower_components/angular-marked/dist/angular-marked.js"></script>
+    <script src="bower_components/jribbble/dist/jribbble.js"></script>
+    <script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
+    <!-- endinject -->
+
+    <!-- inject:js -->
+    <script src="app.js"></script>
+    <script src="shared/zigzag/zigzagDirective.js"></script>
+    <script src="shared/step/stepDirective.js"></script>
+    <script src="shared/project-headline/projectHeadlineDirective.js"></script>
+    <script src="shared/navlink/navlinkDirective.js"></script>
+    <script src="shared/navbar/navbarDirective.js"></script>
+    <script src="shared/navbar/navbarController.js"></script>
+    <script src="shared/hide-on-state-change/hideOnStateChangeDirective.js"></script>
+    <script src="shared/footer/footerDirective.js"></script>
+    <script src="shared/footer/footerController.js"></script>
+    <script src="shared/crew-member/crewMemberDirective.js"></script>
+    <script src="shared/centered-section/centeredSectionDirective.js"></script>
+    <script src="shared/button/buttonDirective.js"></script>
+    <script src="components/lets-talk/letsTalkService.js"></script>
+    <script src="components/lets-talk/letsTalkController.js"></script>
+    <script src="components/case-studies/caseStudiesService.js"></script>
+    <script src="components/case-studies/caseStudiesDetailController.js"></script>
+    <script src="components/case-studies/caseStudiesController.js"></script>
+    <!-- endinject -->
+  </body>
+</html>

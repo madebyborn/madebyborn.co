@@ -1,0 +1,825 @@
+.description {
+  font-weight: 300;
+}
+
+#meet-born {
+  color: $white;
+  @include background-filter($trans-black, '/assets/img/backgrounds/5.jpg');
+}
+
+#about-steps {
+  background-color: $white;
+  color: $black;
+
+  .container {
+    padding-bottom: 2em;
+  }
+
+  .zigzag {
+    fill: $black;
+  }
+}
+
+#steps {
+  background-color: $white;
+  color: $black;
+  font-family: "Lora";
+
+  @media screen and (min-width: $screen-md-min) {
+    display:-webkit-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+
+    bc-step {
+      flex: 50%;
+      height: 22em;
+
+      p {
+        font-size: 1.0em;
+      }
+
+      #step-1, #step-3 {
+        border-right:  1px solid $white-dark;
+      }
+
+      #step-1, #step-2 {
+        border-bottom: 1px solid $white-dark;
+      }
+    }
+  }
+
+  .step {
+    box-sizing: border-box;
+    color: $orange;
+    height: 100%;
+
+    &:hover {
+      background-color: $white-hover;
+
+      hr {
+        width: 100%;
+      }
+    }
+
+    .title {
+      font-weight: 400;
+    }
+
+    .number {
+      color: $orange;
+      font-weight: 700;
+      font-size: 2.7em;
+    }
+
+    p {
+      color: $black;
+    }
+
+    hr {
+      width: 0;
+      border-top: 1px solid $orange;
+      transition: width .5s;
+      margin-bottom: 0;
+      padding-bottom: 2em;
+    }
+  }
+}
+
+#mishu {
+  padding: 15vh 0;
+  text-align: center;
+  background-color: $orange;
+  background-image: url("/assets/img/backgrounds/Mishu.jpg");
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+  font-family: "Lora";
+
+  .row {
+    @media screen and (min-width: $screen-sm-min) {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .author {
+    font-style: italic;
+    font-size: 1.6em;
+  }
+}
+
+#we-do {
+  background-color: $white;
+  color: $black;
+
+  .title {
+    color: $orange;
+  }
+
+  bc-zigzag {
+    padding-top: 4em;
+    margin-bottom: 0;
+  }
+
+  .zigzag {
+    margin-top: 2em;
+    fill: $black;
+  }
+}
+
+#activities {
+  padding: 15vh 0;
+  text-align: center;
+  font-family: "Lora";
+
+  p {
+    font-size: 1.2em;
+  }
+
+  @media screen and (min-width: $screen-md-min) {
+    .activity:first-child {
+      padding-right: 4.5em;
+    }
+
+    .activity:last-child {
+      padding-left: 4.5em;
+    }
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-around;
+
+    @media screen and (max-width: $screen-sm-min) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .title {
+    color: $orange;
+    font-size: 3em;
+  }
+
+  .works {
+    border: 1px solid $white;
+    margin: 3.5em 0;
+    position: relative;
+
+    &::before {
+      content: '';
+      width: 0;
+      height: 2em;
+      position: absolute;
+      border: 1px solid $white;
+      top: -2.2em;
+      z-index: 100;
+    }
+
+    ul {
+      margin: 1em;
+      list-style: inside;
+      font-style: italic;
+
+      display: flex;
+      flex-direction: row;
+      flex-basis: 50%;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      li {
+        margin: 0.5em 0;
+        width: 50%;
+        text-align: left;
+      }
+    }
+  }
+}
+
+#home-images {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-basis: 50vw;
+  height: 60vw;
+
+  @media screen and (max-width: $screen-md-min) {
+    flex-wrap: nowrap;
+    height: 100vh;
+    .img {
+      width: 100% !important;
+      height: 33.33vh !important;
+    }
+  }
+
+  &:first-child {
+    border-top: solid;
+  }
+
+  .img {
+    background-size: cover;
+    background-position: center bottom;
+    height: 60vw;
+    box-sizing: border-box;
+    border-color: $white;
+    border-width: .6em !important;
+
+    &:first-child, &:nth-child(2) {
+      height: 30vw;
+      width: 30%;
+      border-right: solid;
+    }
+
+    &:first-child {
+      border-top: solid;
+    }
+
+    &:nth-child(2), &:nth-child(3) {
+      border-top: solid;
+      border-bottom: solid;
+    }
+
+    &:nth-child(3) {
+      width: 70%;
+
+      @media screen and (max-width: $screen-md-min) {
+        border-top: none;
+      }
+    }
+  }
+
+  #mood-1 {
+    background-image: url("/assets/img/backgrounds/8.jpg");
+  }
+
+  #mood-2 {
+    background-image: url("/assets/img/backgrounds/6.jpg");
+  }
+
+  #mood-3 {
+    background-image: url("/assets/img/backgrounds/7.jpg");
+  }
+}
+
+#medium {
+  padding: 15vh 0;
+  text-align: left;
+  @include background-filter($trans-orange, '/assets/img/backgrounds/2.jpg');
+  background-size: cover;
+  font-family: "Lora";
+
+  .row {
+    @media screen and (min-width: $screen-sm-min) {
+      display: flex;
+      flex-direction: row;
+    }
+
+    * {
+      margin-bottom: 1.8em;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  a {
+    font-family: "Lora";
+    color: $white;
+    font-size: 1.8em;
+    font-style: italic;
+  }
+}
+
+
+#closer-look {
+  @include background-filter($trans-black, '/assets/img/backgrounds/1.jpg');
+}
+
+#creatives-group {
+  @include background-filter($trans-orange, '/assets/img/backgrounds/3.jpg');
+
+  padding: 5em 0;
+
+  q {
+    font-family: 'Lora';
+  }
+}
+
+#core-values {
+  background-color: $white;
+  color: $black;
+
+  .section-header {
+    margin-bottom: 5em;
+  }
+
+  .values {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+
+    @media screen and (max-width: $screen-md-min) {
+      flex-direction: column;
+
+      .value {
+        border-right: none;
+        padding: 0;
+      }
+    }
+  }
+
+  .value {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    flex: 1;
+    padding: 0 1em;
+    border-right: 1px solid $white-dark;
+    font-size: .8em;
+
+    @media screen and (max-width: $screen-md-min) {
+      margin-bottom: 3em;
+    }
+
+    .title {
+      font-family: "Montserrat";
+      font-style: normal;
+    }
+
+    hr {
+      align-self: center;
+      border-style: solid;
+      border-color: $orange;
+      margin: 1em 0;
+      border-width: 2px;
+      width: 15%;
+      transition: all .2s;
+    }
+
+    p {
+      font-family: "Lora";
+    }
+
+    &:hover {
+      hr {
+        width: 30%;
+      }
+    }
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+      border-right: none;
+    }
+  }
+}
+
+#meet-crew {
+  background-color: $white;
+  color: $black;
+
+  .container {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+#crew {
+  display: flex;
+  background-color: $white;
+  color: $black;
+  padding: 10vh 0;
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: $screen-md-min) {
+      flex-direction: column;
+    }
+  }
+
+  .bc-crew-member {
+    flex: 1;
+    margin-bottom: 2em;
+    margin-left: 6em;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    @media screen and (max-width: $screen-md-min) {
+      width: 100%;
+      margin-left: 0;
+    }
+
+    #andres {
+      background-image: url("/assets/img/crew/Andres.jpg");
+    }
+
+    #brianda {
+      background-image: url("/assets/img/crew/Brianda.jpg");
+    }
+
+    .fa {
+      font-size: 24px;
+    }
+
+    .member {
+      &:first-child {
+        margin-left: 0;
+        padding-left: 0;
+      }
+
+      h3 {
+        margin-bottom: .5em;
+      }
+
+      .picture {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center top;
+        margin-bottom: 2em;
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 100%;
+      }
+
+      .name {
+        font-weight: 400;
+      }
+
+      .position {
+        font-style: italic;
+        font-family: "Lora";
+        font-weight: 600;
+        font-size: 1.3em;
+        letter-spacing: 1px;
+      }
+
+      .description {
+        font-family: "Lora";
+        font-size: 1.1em;
+      }
+    }
+
+    .social {
+      display: flex;
+
+      a {
+        margin-right: 2em;
+        color: $black;
+        transition: all .2s;
+
+        &:hover {
+          color: $white-dark;
+        }
+      }
+    }
+  }
+}
+
+#case-studies {
+  @include background-filter($trans-black, '/assets/img/backgrounds/3.jpg');
+}
+
+#projects {
+  @media screen and (min-width: $screen-md-min) {
+    display: flex;
+    flex-direction: row;
+    align-content: stretch;
+    flex-wrap: wrap;
+    border-top: .3em solid;
+    border-bottom: .3em solid;
+  }
+
+  bc-project-headline {
+    display: block;
+    box-sizing: border-box;
+    border-color: $white;
+    border-top: .6em solid;
+    border-left: .6em solid;
+    border-right: .6em solid;
+
+    .background {
+      min-height: 70vw;
+      height: 100%;
+      background-size: cover;
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+    }
+
+    .content {
+      background-color: $trans-orange;
+      width: 100%;
+      padding: 1.5em;
+      margin: 3em;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-direction: column;
+      transition: opacity .5s;
+
+      * {
+        margin-bottom: 1em;
+      }
+
+      &.mobile {
+        opacity: 1;
+        z-index: 1;
+      }
+
+      @media screen and (min-width: $screen-md-min) {
+        opacity: 0;
+        z-index: -1;
+      }
+    }
+
+    &:hover {
+      .content {
+        opacity: 100;
+        z-index: 0;
+      }
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+
+
+    .title {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-size: 2.6em;
+    }
+
+    @media screen and (max-width: $screen-md-min) {
+      bc-button {
+        a {
+          padding: .5em;
+        }
+      }
+    }
+
+    @media screen and (min-width: $screen-md-min) {
+      width: 50%;
+
+      &:nth-child(odd) {
+        border-top: .3em solid;
+        border-left: .6em solid;
+        border-right: .6em solid;
+        border-bottom:  .3em solid;
+      }
+
+      &:nth-child(even) {
+        border-left: none;
+        border-top: .3em solid;
+        border-right: .6em solid;
+        border-bottom: .3em solid;
+      }
+
+      &:last-child:nth-child(odd) {
+        width: 100%;
+      }
+
+      .background {
+        min-height: 40vw;
+      }
+    }
+  }
+}
+
+
+#case-study {
+  background-size: cover;
+
+  .row {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  h2 {
+    font-family: 'Lora';
+    font-style: italic;
+  }
+}
+
+.project-description {
+  padding: 5em 0;
+  background-color: $white;
+  color: $black;
+
+  p {
+    font-weight: 300;
+    font-size: 1.2em;
+  }
+}
+
+.photos-section {
+  background-color: $white;
+
+  img {
+    width: 100%;
+    display: block;
+    border-bottom: 1em solid $white;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+}
+
+#summary {
+  background-color: $white;
+  color: $black;
+  padding: 5em 0;
+
+  p {
+    margin-bottom: 0;
+    font-style: italic;
+    font-family: "Lora";
+    color: $orange;
+  }
+}
+
+#dribbling {
+  .fa {
+    color: $pink;
+  }
+}
+
+#dribbble-shots {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: $white;
+  padding: .5em;
+
+
+  img {
+    display: block;
+    width: 100%;
+  }
+
+  .shot {
+    width: 50%;
+    border: .5em $white solid;
+    box-sizing: border-box;
+
+    &:first-child {
+      width: 100%;
+    }
+  }
+
+  @media screen and (min-width: $screen-md-min) {
+    .shot {
+      width: 33.33% !important;
+    }
+  }
+}
+
+#say-hello {
+  @include background-filter($trans-black, '/assets/img/backgrounds/9.jpg');
+}
+
+#map {
+  align-self: center;
+}
+
+#contact {
+  background-color: $white;
+  padding-bottom: 1em;
+
+  @media screen and (min-width: $screen-md-min) {
+    display: flex;
+    align-items: stretch;
+    align-content: stretch;
+  }
+
+  .contact-form {
+    padding: 5em 0;
+    color: $orange;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (min-width: $screen-md-min) {
+      width: 50vw;
+      margin: 0;
+      padding: 0 3em;
+    }
+
+    .row {
+      width: 100%;
+      display: flex;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      padding: 5em 0;
+      width: 100%;
+
+      @media screen and (max-width: $screen-sm-min) {
+        padding: 5em 2em;
+      }
+    }
+
+    h2 {
+      color: $black;
+      text-align: center;
+      font-family: "Lora";
+      margin-bottom: 0;
+      font-style: italic;
+      margin: 10vh 0;
+      width: 100%;
+    }
+  }
+
+  bc-button {
+    display: flex;
+    justify-content: center;
+
+    a {
+      background-color: $orange;
+      font-style: italic;
+      font-family: 'Lora';
+      padding-top: .5em;
+      padding-bottom: .5em;
+    }
+  }
+}
+
+.angular-google-map {
+  position: relative;
+
+  @media screen and (min-width: $screen-md-min) {
+    width: 50vw;
+    height: 100%;
+  }
+}
+
+.angular-google-map-container {
+  height: 60vw;
+}
+
+.address-circle {
+  position: absolute;
+  top: 15vw;
+  left: 35vw;
+  width: 30vw;
+  height: 30vw;
+  margin: 0 auto;
+  background-color: $lighter-trans-orange;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: box-shadow .3s, background-color .3s, border .3s;
+
+  @media screen and (min-width: $screen-md-min) {
+    left: 10vw;
+  }
+
+  &:hover {
+    background-color: $trans-orange;
+    box-shadow: 0 0 30px #222;
+  }
+
+  .circle-content {
+    text-align: center;
+    margin: 3em;
+
+    .address {
+      font-size: 1.7vw;
+      font-weight: 300;
+    }
+
+    .city {
+      font-size: 2.5vw;
+      font-style: italic;
+      font-family: 'Lora';
+      font-weight: 700;
+    }
+
+    .phone {
+      font-size: 1.6vw;
+    }
+  }
+}

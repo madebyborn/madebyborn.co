@@ -1,0 +1,41 @@
+<header id="say-hello">
+  <div class="container">
+    <div class="row">
+      <h1>Come say hello!</h1>
+      <bc-zigzag></bc-zigzag>
+      <h2>We know we're meant to work together. Let's partner up!</h2>
+      <img scroll-to="contact" src="/assets/img/icons/chevron-down.svg"/>
+    </div>
+  </div>
+</header>
+
+<section id="contact">
+  <div class="container contact-form">
+    <div class="row">
+      <form ng-if="!emailSent" name="emailForm" novalidate ng-submit="emailForm.$valid && submit()">
+        <input type="text" name="name" ng-model="email.name" placeholder="What's your name?" required>
+        <input type="email" name="email" ng-model="email._replyto" placeholder="Your email" required>
+        <input type="tel" name="phone" ng-model="email.phone" placeholder="Your phone number" value="">
+        <textarea name="message" ng-model="email.message" rows="6" required
+        placeholder="What are you up to? You can keep it short, we'll talk about it later"></textarea>
+        <button ng-show="emailForm.$valid">Send it!</button>
+      </form>
+      <h2 ng-if="emailSent">We'll contact you soon.</h2>
+    </div>
+  </div>
+  <ui-gmap-google-map id="map" center='map.center' zoom='map.zoom' options="options">
+    <div class="address-circle">
+      <div class="circle-content">
+        <div class="address">Juan de Ugarte 24 <br>
+          Col. Los Arcos, 83250
+        </div>
+        <div class="city">
+          Hermosillo, MX
+        </div>
+        <div class="phone">
+          P. (662) 216 3886
+        </div>
+      </div>
+    </div>
+  </ui-gmap-google-map>
+</section>

@@ -1,0 +1,47 @@
+<section id="navbar">
+  <div class="container">
+    <div class="navigation">
+      <div class="nav-container">
+        <nav ng-class="{toggled: navbar.toggled}">
+          <div class="icons">
+            <div class="brand">
+              <a href="#">
+                <img class="big" src="assets/img/icons/born-big.svg">
+                <img class="small" src="assets/img/icons/born-small.svg">
+              </a>
+            </div>
+            <div class="nav-mobile">
+              <a id="nav-toggle" ng-click="navbar.toggled = !navbar.toggled">
+                <img ng-src="{{ navbar.toggled ? '/assets/img/icons/close.svg' : '/assets/img/icons/menu.svg'}}" alt="Menu">
+              </a>
+            </div>
+          </div>
+          <ul class="nav-list">
+            <bc-navlink class="navlink" ui-sref="root.home" toggled="navbar.toggled">Approach</bc-navlink>
+            <bc-navlink class="navlink" ui-sref="root.team" toggled="navbar.toggled">Team</bc-navlink>
+            <bc-navlink class="navlink" ui-sref="root.case-studies" toggled="navbar.toggled">Work</bc-navlink>
+            <bc-navlink class="navlink" ui-sref="root.talk" toggled="navbar.toggled">Contact</bc-navlink>
+            <div class="navlink">
+              <a href="https://medium.com/madebyborn">Blog</a>
+            </div>
+            <div class="navlink">
+              <a href="http://es.madebyborn.co"><span class="orange">EN</span>&nbsp;- ES</a>
+            </div>
+          </ul>
+
+          <ul class="nav-social">
+            <a href="https://www.facebook.com/madebyborn/">
+              <i class="fa fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/madebyborn/">
+              <i class="fa fa-instagram"></i>
+            </a>
+            <a href="https://twitter.com/madebyborn">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</section>

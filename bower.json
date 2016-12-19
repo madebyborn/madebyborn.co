@@ -1,0 +1,33 @@
+{
+  "name": "madebyborn.co",
+  "description": "BORN's Website.",
+  "main": "index.js",
+  "authors": [
+    "Marco Alvarado <marcoantonioam9@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/madebyborn/madebyborn.co",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.6",
+    "angular-ui-router": "^0.3.1",
+    "skeleton": "^2.0.4",
+    "angular-animate": "^1.5.7",
+    "font-awesome": "^4.6.3",
+    "headroom.js": "https://npmcdn.com/headroom.js/bower.zip",
+    "ngSmoothScroll": "^2.0.0",
+    "angular-contentful": "^2.0.0",
+    "angular-sanitize": "^1.5.8",
+    "angular-marked": "^1.2.2",
+    "jribbble": "^2.0.4",
+    "underscore": "^1.8.3",
+    "angular-google-maps": "^2.3.3"
+  }
+}
